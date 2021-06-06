@@ -11,17 +11,8 @@ namespace CBB_project
 {
 
 
-    public partial class MainSite
+    public partial class Grouping
     {
-
-        /// <summary>
-        /// id control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button id;
 
         /// <summary>
         /// Master property.

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CBB_project.Task
+namespace CBB_project
 {
-    public partial class Memory : System.Web.UI.Page
+    public partial class Grouping : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -135,6 +135,17 @@ namespace CBB_project.Classes
             sqlParameters.Add(s);
         }
 
+        /// <summary>
+        /// CHAR paramétert ad az SP paraméter listához
+        /// </summary>
+        /// <param name="ParameterName">Paraméter neve (pl. @ParamName)</param>
+        /// <param name="Value">Értéke</param>
+        public void AddCharParameter(string ParameterName, string Value, int Length = -1)
+        {
+            SqlParameter s = new SqlParameter(ParameterName, SqlDbType.Char, Length);
+            s.Value = Value;
+            sqlParameters.Add(s);
+        }
 
     }
 }

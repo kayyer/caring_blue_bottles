@@ -7,12 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CBB_project.Task
+namespace CBB_project
 {
 
 
     public partial class Memory
     {
+
+        /// <summary>
+        /// tb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb;
 
         /// <summary>
         /// Master property.

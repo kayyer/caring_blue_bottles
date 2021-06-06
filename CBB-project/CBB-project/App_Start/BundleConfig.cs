@@ -33,6 +33,14 @@ namespace CBB_project
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            // Hash bundle:
+            bundles.Add(new ScriptBundle("~/bundles/hash").Include(
+                    "~/Scripts/hash.js"));
+
+            // Memory bundle:
+            bundles.Add(new ScriptBundle("~/bundles/memory").Include(
+                    "~/Scripts/Memory.js"));
         }
     }
 }

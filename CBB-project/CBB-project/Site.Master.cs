@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,14 +17,43 @@ namespace CBB_project
         /// </summary>
         public SQLIF SqlIF;
 
+        /// <summary>
+        /// Felhasználó adatai tárolva
+        /// </summary>
+        public myUser myuser;
+
         protected void Page_Init(object sender, EventArgs e)
         {
-            SqlIF = new SQLIF(System.Configuration.ConfigurationManager.ConnectionStrings["CBBDB"].ConnectionString);
+            //authenticate();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Authentikáció/Authorizáció
+        /// </summary>
+        private void authenticate()
+        {
+            HttpCookie usercookie = Request.Cookies["CBB-UNA"];
+            HttpCookie sessioncookie = Request.Cookies["CBB-SID"];
+            if (usercookie != null && sessioncookie != null)
+            {
+                SqlIF = new SQLIF(System.Configuration.ConfigurationManager.ConnectionStrings["CBBDB"].ConnectionString);
+                string username = usercookie.Value.ToString().Split('=')[1];
+                string sessionid = sessioncookie.Value.ToString().Split('=')[1];
+                SqlIF.AddVarcharParameter("@username", username, 32);
+                SqlIF.AddCharParameter("@sessionid", sessionid, 36);
+                DataTable dt = SqlIF.getDataTable("authorize");
+                myuser = new myUser(dt.Rows[0]["username"].ToString(), dt.Rows[0]["FullName"].ToString(), dt.Rows[0]["isAdmin"].ToString().Equals("True"));
+            }
+            else
+            {
+                Response.Redirect(ResolveUrl("/Login"));
+                return;
+            }
         }
     }
 }

@@ -20,6 +20,7 @@
             <div class="row myrow">
                 <img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/>
             </div>
+            <asp:Button ID="id" Text="Gomb" runat="server" OnClick="clickEvent" />
         </div>
     </div>
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,7 +15,12 @@ namespace CBB_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int a = 2;
+        }
 
+        protected void clickEvent(object sender, EventArgs e)
+        {
+            
         }
     }
 }
