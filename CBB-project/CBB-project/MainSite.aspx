@@ -2,24 +2,33 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" style="background-image: url('/Pictures/hatter.png');" runat="server">
-    <div class="row menuClass myPage">
-        <div class="col-sm-3 col-md-2" style="width: 10rem;">
-            <img src="/Pictures/amigos2.png" class="myImg" />
+    <% if (Master.myuser.isAdmin)
+    { %>
+        
+        
+
+    <%}
+    else
+    { %>
+        <div class="row menuClass myPage">
+            <div class="col-sm-3 col-md-2" style="width: 10rem;">
+                <img src="/Pictures/amigos2.png" class="myImg" />
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <div class="row myrow">
+                    <a href="/Tasks" class="ml-auto"><img src="/Pictures/task.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="#" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-9 col-md-10">
-            <div class="row myrow">
-                <a href="/Tasks" class="ml-auto"><img src="/Pictures/task.png" class="myImg" style="width: 8rem;"/></a>
-            </div>
-            <div class="row myrow">
-                <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
-            </div>
-            <div class="row myrow">
-                <a href="#" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
-            </div>
-            <div class="row myrow">
-                <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
-            </div>
-        </div>
-    </div>
+    <%} %>
 
 </asp:Content>

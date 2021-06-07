@@ -13,12 +13,17 @@ namespace CBB_project.Classes
 
         public string FullName;
 
-        public myUser(string username, string fullname, bool isadmin)
+        public string sessionID;
+
+        public int userID;
+
+        public myUser(string username, string fullname, bool isadmin, int userid, string sessionid = "")
         {
             UserName = username;
             FullName = fullname;
             isAdmin = isadmin;
-
+            sessionID = sessionid;
+            userID = userid;
         }
     }
 }

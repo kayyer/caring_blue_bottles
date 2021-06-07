@@ -119,6 +119,8 @@
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
     <Content Include="Pictures\memory_icon.png" />
+    <Content Include="Pictures\plus.png" />
+    <Content Include="Pictures\search.png" />
     <Content Include="Scripts\hash.js" />
     <Content Include="Scripts\Memory.js" />
     <Content Include="Tasks.aspx" />
@@ -131,6 +133,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Pictures\refresh.png" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="MainSite.aspx" />

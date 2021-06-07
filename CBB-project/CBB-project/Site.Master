@@ -51,7 +51,7 @@
                     <ul class="nav nav-pills menuClass">
                         <li class="nav-item">
                             <a class="navbar-brand" style="height:90px; padding:0px;" runat="server" href="~/MainSite">
-                                <img style="height:90px; width:auto; padding:5px;" src="Pictures/amigos_tr.png">
+                                <img style="height:90px; width:auto; padding:5px;" src="/Pictures/amigos_tr.png">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" style="height:90px; padding:0px;" runat="server" href="~/Messages">
-                                <img style="height:90px; width:auto; padding:5px;" src="Pictures/message_icon.png">
+                                <img style="height:90px; width:auto; padding:5px;" src="/Pictures/message_icon.png">
                             </a>
                         </li>
                     </ul>

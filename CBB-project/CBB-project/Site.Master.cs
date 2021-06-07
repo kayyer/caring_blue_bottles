@@ -25,7 +25,7 @@ namespace CBB_project
         protected void Page_Init(object sender, EventArgs e)
         {
             //authenticate();
-            myuser = new myUser("Felhasználónév", "Teljes Név", true);
+            myuser = new myUser("Felhasználónév", "Teljes Név", false, 4);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace CBB_project
                 SqlIF.AddVarcharParameter("@username", username, 32);
                 SqlIF.AddCharParameter("@sessionid", sessionid, 36);
                 DataTable dt = SqlIF.getDataTable("authorize");
-                myuser = new myUser(dt.Rows[0]["username"].ToString(), dt.Rows[0]["FullName"].ToString(), dt.Rows[0]["isAdmin"].ToString().Equals("True"));
+                myuser = new myUser(dt.Rows[0]["username"].ToString(), dt.Rows[0]["FullName"].ToString(), dt.Rows[0]["isAdmin"].ToString().Equals("True"), Int32.Parse(dt.Rows[0]["UID"].ToString()), sessionid);
             }
             else
             {
