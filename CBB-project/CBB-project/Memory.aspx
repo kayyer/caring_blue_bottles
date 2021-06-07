@@ -4,16 +4,19 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%: Scripts.Render("~/bundles/memory") %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <div class="myPage">
     <!--HTML-->
+
+
+
     <div style="margin-top:100px;">
-
         <asp:TextBox ID="tb" runat="server"></asp:TextBox>
-
         <%= coderMaker() %>
-
     </div>
 
 
+
+
+    <!-- HTML vége -->
+    </div>
 </asp:Content>

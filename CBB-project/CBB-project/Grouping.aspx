@@ -2,5 +2,8 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="myPage">
 
+
+    </div>
 </asp:Content>

@@ -25,6 +25,7 @@ namespace CBB_project
         protected void Page_Init(object sender, EventArgs e)
         {
             //authenticate();
+            myuser = new myUser("Felhasználónév", "Teljes Név", true);
         }
 
         protected void Page_Load(object sender, EventArgs e)

@@ -2,7 +2,7 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    Felhasználó kezelése
-
+    <div class="myPage">
+        Felhasználó kezelése
+    </div>
 </asp:Content>

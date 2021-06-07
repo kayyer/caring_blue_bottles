@@ -11,7 +11,7 @@ namespace CBB_project
 {
 
 
-    public partial class MainSite
+    public partial class Events
     {
 
         /// <summary>

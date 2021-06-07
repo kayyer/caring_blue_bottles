@@ -2,8 +2,7 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="row" style="margin-top:50px;">
+    <div class="row myPage">
         <div class="col-sm-6 col-md-4 mycentered">
             <div class="card mycard" style="width: 18rem;">
                 <a href="/Task/Memory"><img class="card-img-top myImg" src="/Pictures/memory_icon.png" alt="Card image cap"></a>

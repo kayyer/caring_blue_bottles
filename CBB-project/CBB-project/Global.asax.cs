@@ -13,6 +13,10 @@ namespace CBB_project
     {
         void Application_Start(object sender, EventArgs e)
         {
+            RouteTable.Routes.MapPageRoute("",
+                "FAQ/{DocID}",
+                "~/FAQ.aspx");
+
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
