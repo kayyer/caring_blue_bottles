@@ -47,6 +47,42 @@ namespace CBB_project.Classes
         }
 
         /// <summary>
+        /// Teszteli az objektumot
+        /// </summary>
+        /// <returns>False - nem jó; True - jó</returns>
+        public bool testConnection()
+        {
+            try
+            {
+                if(sqlConnection == null)
+                {
+                    return false;
+                }
+
+                sqlConnection.Open();
+                if(sqlConnection.State != ConnectionState.Open)
+                {
+                    return false;
+                }
+                else
+                {
+                    sqlConnection.Close();
+                }
+
+                if(sqlParameters == null)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch(Exception exc)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Minden eddig megadott paramétert töröl
         /// </summary>
         public void ResetParameters()

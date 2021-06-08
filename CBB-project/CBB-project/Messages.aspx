@@ -17,7 +17,7 @@
                         <asp:ImageButton ID="searchBut" CssClass="btn btn-primary h-100 d-inline-block" ImageUrl="~/Pictures/search.png" AlternateText="Keresés" runat="server" />
                     </div>
                     <div class="col-sm-1" style="height:100%">
-                        <asp:ImageButton ID="newB" CssClass="btn btn-succeed h-100 d-inline-block" ImageUrl="~/Pictures/plus.png" AlternateText="Új" runat="server" OnClick="newClick"/>
+                        <asp:ImageButton ID="newB" CssClass="btn btn-success h-100 d-inline-block" ImageUrl="~/Pictures/plus.png" AlternateText="Új" runat="server" OnClick="newClick"/>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@
                     <asp:TextBox ID="textTb" PlaceHolder="Új üzenet" runat="server"></asp:TextBox>
                 </div>
                 <div class="col-sm-2" style="height:100%">
-                    <asp:ImageButton ID="sendBut_2" ImageUrl="/Pictures/send.png" CssClass="btn btn-success h-100 d-inline-block" AlternateText="Küldés" OnClick="sendBut_Click" runat="server"/>
+                    <asp:ImageButton ID="sendBut_2" ImageUrl="/Pictures/send.png" CssClass="btn btn-success h-100 d-inline-block" AlternateText="Küldés" OnClick="Send_Click" runat="server"/>
                 </div>
             </div>
 

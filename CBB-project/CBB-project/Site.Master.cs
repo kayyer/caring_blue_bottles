@@ -24,8 +24,8 @@ namespace CBB_project
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            //authenticate();
-            myuser = new myUser("Felhasználónév", "Teljes Név", false, 4);
+            authenticate();
+            //myuser = new myUser("Felhasználónév", "Teljes Név", false, 4);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -42,7 +42,8 @@ namespace CBB_project
             HttpCookie sessioncookie = Request.Cookies["CBB-SID"];
             if (usercookie != null && sessioncookie != null)
             {
-                SqlIF = new SQLIF(System.Configuration.ConfigurationManager.ConnectionStrings["CBBDB"].ConnectionString);
+                if(SqlIF == null || !SqlIF.testConnection())
+                    SqlIF = new SQLIF(System.Configuration.ConfigurationManager.ConnectionStrings["CBBDB"].ConnectionString);
                 string username = usercookie.Value.ToString().Split('=')[1];
                 string sessionid = sessioncookie.Value.ToString().Split('=')[1];
                 SqlIF.AddVarcharParameter("@username", username, 32);

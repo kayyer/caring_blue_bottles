@@ -35,7 +35,7 @@
                             <asp:TextBox CssClass="form-control w-75 mx-auto" MaxLength="32" Placeholder="Felhasználónév" ID="name" runat="server"></asp:TextBox>
                         </div>
                         <div class="row">                   
-                            <asp:TextBox CssClass="form-control w-75 mx-auto" Placeholder="Jelszó" ID="psw" runat="server"></asp:TextBox>
+                            <asp:TextBox TextMode="Password" CssClass="form-control w-75 mx-auto" Placeholder="Jelszó" ID="psw" runat="server"></asp:TextBox>
                         </div>
                         <asp:Button ID="loginBut" CssClass="btn btn-success mt-3 p-2" Text="Mehet!" OnClick="loginClick" runat="server" />
                         <asp:LinkButton ID="forgottenPsw" CssClass="d-block mt-4" Text="Elfelejtett jelszó" runat="server" OnClick="forgottenClick"></asp:LinkButton>

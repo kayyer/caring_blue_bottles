@@ -4,9 +4,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" style="background-image: url('/Pictures/hatter.png');" runat="server">
     <% if (Master.myuser.isAdmin)
     { %>
-        
-        
 
+        <div class="row menuClass myPage">
+            <div class="col-sm-12 col-md-12">
+                <div class="row myrow">
+                    <a href="/UserSettings" class="ml-auto"><img src="/Pictures/task.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="#" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+                <div class="row myrow">
+                    <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
+                </div>
+            </div>
+        </div>
+        
     <%}
     else
     { %>

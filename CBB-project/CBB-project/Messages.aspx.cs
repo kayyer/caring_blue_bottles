@@ -64,7 +64,7 @@ namespace CBB_project
             if (isValid)
             {
                 Master.SqlIF.ResetParameters();
-                Master.SqlIF.AddVarcharParameter("@sessionid", Master.myuser.sessionID, 32);
+                Master.SqlIF.AddCharParameter("@sessionid", Master.myuser.sessionID, 36);
                 DataTable dt = Master.SqlIF.getDataTable("getMessages");
                 StringBuilder sb = new StringBuilder();
 
@@ -103,7 +103,7 @@ namespace CBB_project
             if (isValid)
             {
                 Master.SqlIF.ResetParameters();
-                Master.SqlIF.AddVarcharParameter("@sessionid", Master.myuser.sessionID, 32);
+                Master.SqlIF.AddCharParameter("@sessionid", Master.myuser.sessionID, 36);
                 Master.SqlIF.AddIntParameter("@MID", Int32.Parse(docID));
                 DataTable dt = Master.SqlIF.getDataTable("getMessages");
                 StringBuilder sb = new StringBuilder();
@@ -123,14 +123,42 @@ namespace CBB_project
             }
         }
 
+        /// <summary>
+        /// Válasz levél küldése
+        /// </summary>
         protected void Send_Click(object sender, EventArgs e)
         {
-
+            if (textTb.Text.Length > 0)
+            {
+                Master.SqlIF.ResetParameters();
+                Master.SqlIF.AddCharParameter("@sessionid", Master.myuser.sessionID, 36);
+                Master.SqlIF.AddIntParameter("@MID", Int32.Parse(docID));
+                Master.SqlIF.AddVarcharParameter("@content", textTb.Text, 128);
+                Master.SqlIF.AddIntParameter("@uid", Master.myuser.userID);
+                Master.SqlIF.runSp("writeMessage");
+                Response.Redirect(ResolveUrl("/Messages/" + docID));
+                return;
+            }
         }
 
+        /// <summary>
+        /// Új levél küldése
+        /// </summary>
         protected void sendBut_Click(object sender, EventArgs e)
         {
-
+            if (newtextTb.Text.Length > 0 && subjectTb.Text.Length > 0 && Master.myuser.userID != 1)
+            {
+                Master.SqlIF.ResetParameters();
+                Master.SqlIF.AddCharParameter("@sessionid", Master.myuser.sessionID, 36);
+                Master.SqlIF.AddVarcharParameter("@content", newtextTb.Text, 128);
+                Master.SqlIF.AddVarcharParameter("@subject", subjectTb.Text, 64);
+                Master.SqlIF.AddIntParameter("@uid", Master.myuser.userID);
+                Master.SqlIF.AddIntParameter("@toid", 1);                       //admin-admin egyelőre
+                Master.SqlIF.AddIntParameter("@isGroup", 0);                    //0 vagy 1
+                Master.SqlIF.runSp("writeMessage");
+                Response.Redirect(ResolveUrl("/Messages/" + docID));
+                return;
+            }
         }
 
         protected void refreshBut_Click(object sender, ImageClickEventArgs e)
