@@ -1,24 +1,24 @@
 USE [CBB]
 GO
-/****** Object:  Table [dbo].[Events]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[Events]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Events](
-	[EID] [int] NOT NULL,
+	[EID] [int] IDENTITY(1,1) NOT NULL,
 	[EventName] [varchar](32) NOT NULL,
 	[StartDate] [date] NULL,
 	[EndDate] [date] NULL,
 	[Description] [varchar](256) NOT NULL,
 	[GoalPoint] [int] NULL,
-PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__Events__C190170B8AD62E3A] PRIMARY KEY CLUSTERED 
 (
 	[EID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FAQ]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[FAQ]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -34,7 +34,7 @@ CREATE TABLE [dbo].[FAQ](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Messages]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[Messages]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[Messages](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MessagesToFrom]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[MessagesToFrom]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -69,7 +69,7 @@ CREATE TABLE [dbo].[MessagesToFrom](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MultipleAnswer]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[MultipleAnswer]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -84,7 +84,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MultipleAToQ]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[MultipleAToQ]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -99,7 +99,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MultipleQuestion]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[MultipleQuestion]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -113,13 +113,13 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[QandA]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[QandA]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[QandA](
-	[QID] [int] NOT NULL,
+	[QID] [int] IDENTITY(1,1) NOT NULL,
 	[Question] [varchar](256) NOT NULL,
 	[Answer] [varchar](128) NOT NULL,
  CONSTRAINT [PK_QandA] PRIMARY KEY CLUSTERED 
@@ -128,7 +128,7 @@ CREATE TABLE [dbo].[QandA](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[QGroupToTask]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[QGroupToTask]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[QuestionGroups]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[QuestionGroups]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -157,7 +157,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[QuestionsToGroups]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[QuestionsToGroups]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -172,7 +172,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tasks]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[Tasks]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -186,7 +186,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UGroupsToQGroups]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UGroupsToQGroups]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -201,7 +201,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserGroups]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UserGroups]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -215,7 +215,7 @@ CREATE TABLE [dbo].[UserGroups](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Users]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -234,7 +234,7 @@ CREATE TABLE [dbo].[Users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsersGroupsToTasks]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UsersGroupsToTasks]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -249,7 +249,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsersSessions]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UsersSessions]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -265,23 +265,23 @@ CREATE TABLE [dbo].[UsersSessions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsersToEvents]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UsersToEvents]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[UsersToEvents](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[UID] [int] NOT NULL,
 	[EID] [int] NOT NULL,
-	[Points] [int] NULL,
-PRIMARY KEY CLUSTERED 
+	[Points] [int] NOT NULL,
+ CONSTRAINT [PK_UsersToEvents] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsersToUGroups]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  Table [dbo].[UsersToUGroups]    Script Date: 2021. 06. 12. 20:14:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -295,6 +295,14 @@ CREATE TABLE [dbo].[UsersToUGroups](
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Events] ON 
+GO
+INSERT [dbo].[Events] ([EID], [EventName], [StartDate], [EndDate], [Description], [GoalPoint]) VALUES (1, N'Pontos esemény', CAST(N'2021-06-10' AS Date), CAST(N'2021-07-20' AS Date), N'Ezen az eseményen 5000 pontot kell elérni', 5000)
+GO
+INSERT [dbo].[Events] ([EID], [EventName], [StartDate], [EndDate], [Description], [GoalPoint]) VALUES (2, N'Gyűjtögetős esemény', CAST(N'2021-06-12' AS Date), CAST(N'2021-07-01' AS Date), N'Gyűjtsd össze az összes képdarabkát!', -16)
+GO
+SET IDENTITY_INSERT [dbo].[Events] OFF
 GO
 SET IDENTITY_INSERT [dbo].[FAQ] ON 
 GO
@@ -316,13 +324,23 @@ INSERT [dbo].[Messages] ([ID], [MID], [Content], [Date], [SenderID]) VALUES (4, 
 GO
 INSERT [dbo].[Messages] ([ID], [MID], [Content], [Date], [SenderID]) VALUES (5, 1, N'Megnézted?', CAST(N'2021-06-08T15:31:42.307' AS DateTime), 1)
 GO
+INSERT [dbo].[Messages] ([ID], [MID], [Content], [Date], [SenderID]) VALUES (6, 1, N'Aha, megnéztem, mindjárt csinálom.', CAST(N'2021-06-12T14:31:30.533' AS DateTime), 4)
+GO
 SET IDENTITY_INSERT [dbo].[Messages] OFF
 GO
 SET IDENTITY_INSERT [dbo].[MessagesToFrom] ON 
 GO
-INSERT [dbo].[MessagesToFrom] ([ID], [MID], [UID1], [UID2], [Subject], [LastMessage]) VALUES (1, 1, 4, 1, N'Feladatod van', CAST(N'2021-06-08T15:31:42.320' AS DateTime))
+INSERT [dbo].[MessagesToFrom] ([ID], [MID], [UID1], [UID2], [Subject], [LastMessage]) VALUES (1, 1, 4, 1, N'Feladatod van', CAST(N'2021-06-12T14:31:30.533' AS DateTime))
 GO
 SET IDENTITY_INSERT [dbo].[MessagesToFrom] OFF
+GO
+SET IDENTITY_INSERT [dbo].[QandA] ON 
+GO
+INSERT [dbo].[QandA] ([QID], [Question], [Answer]) VALUES (1, N'Oroszlán angolul', N'Lion')
+GO
+INSERT [dbo].[QandA] ([QID], [Question], [Answer]) VALUES (2, N'Tigris angolul', N'Tiger')
+GO
+SET IDENTITY_INSERT [dbo].[QandA] OFF
 GO
 SET IDENTITY_INSERT [dbo].[UserGroups] ON 
 GO
@@ -338,9 +356,15 @@ INSERT [dbo].[Users] ([UID], [FullName], [UserName], [Description], [BirthDate],
 GO
 SET IDENTITY_INSERT [dbo].[Users] OFF
 GO
-INSERT [dbo].[UsersSessions] ([SesID], [UID], [From], [Until]) VALUES (N'ba0d2a6f-c5ae-492e-9ab8-6833d7d710dc', 4, CAST(N'2021-06-08T15:23:54.457' AS DateTime), CAST(N'2021-06-08T18:23:54.457' AS DateTime))
+INSERT [dbo].[UsersSessions] ([SesID], [UID], [From], [Until]) VALUES (N'22e1e824-6931-4d1b-9889-0e4cfd0b0853', 1, CAST(N'2021-06-12T20:03:46.590' AS DateTime), CAST(N'2021-06-12T23:03:46.590' AS DateTime))
 GO
-INSERT [dbo].[UsersSessions] ([SesID], [UID], [From], [Until]) VALUES (N'c54a00c1-c875-429f-8d92-7f7fbd43fced', 1, CAST(N'2021-06-08T15:31:15.773' AS DateTime), CAST(N'2021-06-08T18:31:15.773' AS DateTime))
+SET IDENTITY_INSERT [dbo].[UsersToEvents] ON 
+GO
+INSERT [dbo].[UsersToEvents] ([ID], [UID], [EID], [Points]) VALUES (1, 4, 1, 30)
+GO
+INSERT [dbo].[UsersToEvents] ([ID], [UID], [EID], [Points]) VALUES (2, 4, 2, -2)
+GO
+SET IDENTITY_INSERT [dbo].[UsersToEvents] OFF
 GO
 SET IDENTITY_INSERT [dbo].[UsersToUGroups] ON 
 GO
@@ -348,7 +372,7 @@ INSERT [dbo].[UsersToUGroups] ([ID], [UID], [UGID]) VALUES (1, 4, 1)
 GO
 SET IDENTITY_INSERT [dbo].[UsersToUGroups] OFF
 GO
-/****** Object:  StoredProcedure [dbo].[authorize]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[authorize]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -425,7 +449,36 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[getFAQ]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[getEvent]    Script Date: 2021. 06. 12. 20:15:00 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		CBB - ZB
+-- Create date: 2021-06-12
+-- Description:	Események listája
+-- =============================================
+CREATE PROCEDURE [dbo].[getEvent]
+	@EID int = NULL,
+	@UID int
+AS
+BEGIN
+	if @EID is null
+		begin
+			SELECT e.EID, e.[EventName], e.StartDate, e.EndDate, e.GoalPoint, ue.Points FROM [Events] e
+				JOIN UsersToEvents ue ON ue.[UID] = @UID and ue.EID = e.EID
+				WHERE e.[EndDate] > GETDATE() AND e.[StartDate] < GETDATE()
+		end
+	else
+		begin
+			SELECT e.EID, e.[EventName], e.StartDate, e.EndDate, e.[Description], e.GoalPoint, ue.Points FROM [Events] e
+				JOIN UsersToEvents ue ON ue.[UID] = @UID and ue.EID = e.EID
+				WHERE e.[EndDate] > GETDATE() AND e.[StartDate] < GETDATE() AND e.EID = @EID
+		end
+END
+GO
+/****** Object:  StoredProcedure [dbo].[getFAQ]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -449,7 +502,7 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[getMessages]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[getMessages]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -501,7 +554,7 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[getUsers]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[getUsers]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -552,7 +605,32 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[setUsers]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[setQA]    Script Date: 2021. 06. 12. 20:15:00 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		CBB - ZB
+-- Create date: 2021-06-12
+-- Description:	Kérdés-válasz feltöltés
+-- =============================================
+CREATE PROCEDURE [dbo].[setQA] 
+	@question varchar(256),
+	@answer varchar(128)
+AS
+BEGIN
+
+	INSERT INTO [dbo].[QandA]
+				([Question]
+				,[Answer])
+			VALUES
+				(@question
+				,@answer)
+	
+END
+GO
+/****** Object:  StoredProcedure [dbo].[setUsers]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -630,7 +708,7 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[writeMessage]    Script Date: 2021. 06. 08. 16:59:24 ******/
+/****** Object:  StoredProcedure [dbo].[writeMessage]    Script Date: 2021. 06. 12. 20:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

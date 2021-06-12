@@ -2,22 +2,25 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" style="background-image: url('/Pictures/hatter.png');" runat="server">
+        <%: Scripts.Render("~/bundles/text2speech") %>
+
+
     <% if (Master.myuser.isAdmin)
     { %>
 
         <div class="row menuClass myPage">
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-6 col-md-6">
                 <div class="row myrow">
-                    <a href="/UserSettings" class="ml-auto"><img src="/Pictures/task.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/SetQuestions" class="ml-auto"><img src="/Pictures/gears.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/#" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="#" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="#" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/#" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
             </div>
         </div>
@@ -37,7 +40,7 @@
                     <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="#" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="#" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
                     <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>

@@ -15,12 +15,8 @@ namespace CBB_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-        protected void clickEvent(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

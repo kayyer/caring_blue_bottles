@@ -25,6 +25,8 @@ namespace CBB_project
         protected void Page_Init(object sender, EventArgs e)
         {
             authenticate();
+            linkToUser.NavigateUrl = ResolveUrl("/SetUser/"+myuser.userID);
+            linkToUser.Text = myuser.UserName;
             //myuser = new myUser("Felhasználónév", "Teljes Név", false, 4);
         }
 

@@ -50,6 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -118,11 +119,13 @@
     <Content Include="Grouping.aspx" />
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
+    <Content Include="Pictures\gears.png" />
     <Content Include="Pictures\memory_icon.png" />
     <Content Include="Pictures\plus.png" />
     <Content Include="Pictures\search.png" />
-    <Content Include="Scripts\hash.js" />
+    <Content Include="Scripts\text2speech.js" />
     <Content Include="Scripts\Memory.js" />
+    <Content Include="SetQuestions.aspx" />
     <Content Include="Tasks.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -171,6 +174,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="SetUser.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="Uploader.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -181,6 +185,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\Hasher.cs" />
     <Compile Include="Classes\myUser.cs" />
+    <Compile Include="Classes\Reader.cs" />
     <Compile Include="Classes\SQLIF.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -216,6 +221,13 @@
     </Compile>
     <Compile Include="Memory.aspx.designer.cs">
       <DependentUpon>Memory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetQuestions.aspx.cs">
+      <DependentUpon>SetQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetQuestions.aspx.designer.cs">
+      <DependentUpon>SetQuestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tasks.aspx.cs">
       <DependentUpon>Tasks.aspx</DependentUpon>
@@ -269,6 +281,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Uploader.aspx.cs">
+      <DependentUpon>Uploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uploader.aspx.designer.cs">
+      <DependentUpon>Uploader.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

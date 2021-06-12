@@ -14,8 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <webopt:bundlereference runat="server" path="~/Content/css" />
 
-    <%: Scripts.Render("~/bundles/hash") %>
-
 </head>
 <body style="background-color:#8BBF58;">
     <form id="form1" runat="server">
@@ -39,6 +37,8 @@
                         </div>
                         <asp:Button ID="loginBut" CssClass="btn btn-success mt-3 p-2" Text="Mehet!" OnClick="loginClick" runat="server" />
                         <asp:LinkButton ID="forgottenPsw" CssClass="d-block mt-4" Text="Elfelejtett jelszó" runat="server" OnClick="forgottenClick"></asp:LinkButton>
+                    
+                        <input type="button" id="blind" value="Vak vagyok" onclick="return readST('username required')"/>
                     </div>
                 </div>
             </div>

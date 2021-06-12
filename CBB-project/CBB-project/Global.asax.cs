@@ -25,6 +25,10 @@ namespace CBB_project
                 "SetUser/{DocID}",
                 "~/SetUser.aspx");
 
+            RouteTable.Routes.MapPageRoute("",
+                "Events/{DocID}",
+                "~/Events.aspx");
+
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

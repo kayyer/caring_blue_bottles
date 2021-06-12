@@ -35,8 +35,8 @@ namespace CBB_project
                             "~/Scripts/modernizr-*"));
 
             // Hash bundle:
-            bundles.Add(new ScriptBundle("~/bundles/hash").Include(
-                    "~/Scripts/hash.js"));
+            bundles.Add(new ScriptBundle("~/bundles/text2speech").Include(
+                    "~/Scripts/text2speech.js"));
 
             // Memory bundle:
             bundles.Add(new ScriptBundle("~/bundles/memory").Include(

@@ -4,7 +4,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="myPage">
 
-        Események
+            <% if (dataActive)
+            { %>
+
+                <%=getEvents() %>
+
+            <%}
+            else
+            {%>
+
+                Sajnos nincs elérhető adat
+
+            <%} %>
 
     </div>
 </asp:Content>

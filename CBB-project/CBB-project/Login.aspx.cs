@@ -90,10 +90,6 @@ namespace CBB_project
                 return;
             }
 
-            //string username = name.Text;
-            //SQLIF sqlif = new SQLIF(System.Configuration.ConfigurationManager.ConnectionStrings["CBBDB"].ConnectionString);
-            //sqlif.AddVarcharParameter("@username", username, 32);
-
         }
     }
 }
