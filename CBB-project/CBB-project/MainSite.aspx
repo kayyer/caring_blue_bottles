@@ -14,13 +14,10 @@
                     <a href="/SetQuestions" class="ml-auto"><img src="/Pictures/gears.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="/#" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/SetUsergroups" class="ml-auto"><img src="/Pictures/groups.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="#" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
-                </div>
-                <div class="row myrow">
-                    <a href="/#" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/ListUsers" class="ml-auto"><img src="/Pictures/users.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
             </div>
         </div>

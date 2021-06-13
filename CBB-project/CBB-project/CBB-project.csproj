@@ -116,16 +116,19 @@
     <Content Include="FAQ.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Grouping.aspx" />
+    <Content Include="ListUsers.aspx" />
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
     <Content Include="Pictures\gears.png" />
+    <Content Include="Pictures\groups.png" />
     <Content Include="Pictures\memory_icon.png" />
     <Content Include="Pictures\plus.png" />
     <Content Include="Pictures\search.png" />
+    <Content Include="Pictures\users.png" />
     <Content Include="Scripts\text2speech.js" />
     <Content Include="Scripts\Memory.js" />
     <Content Include="SetQuestions.aspx" />
+    <Content Include="SetUsergroups.aspx" />
     <Content Include="Tasks.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -208,12 +211,12 @@
     <Compile Include="FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Grouping.aspx.cs">
-      <DependentUpon>Grouping.aspx</DependentUpon>
+    <Compile Include="ListUsers.aspx.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Grouping.aspx.designer.cs">
-      <DependentUpon>Grouping.aspx</DependentUpon>
+    <Compile Include="ListUsers.aspx.designer.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Memory.aspx.cs">
       <DependentUpon>Memory.aspx</DependentUpon>
@@ -228,6 +231,13 @@
     </Compile>
     <Compile Include="SetQuestions.aspx.designer.cs">
       <DependentUpon>SetQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetUsergroups.aspx.cs">
+      <DependentUpon>SetUsergroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetUsergroups.aspx.designer.cs">
+      <DependentUpon>SetUsergroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tasks.aspx.cs">
       <DependentUpon>Tasks.aspx</DependentUpon>
