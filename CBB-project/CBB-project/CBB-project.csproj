@@ -110,6 +110,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\memory.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Events.aspx" />
@@ -119,12 +120,25 @@
     <Content Include="ListUsers.aspx" />
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
+    <Content Include="Pictures\amigosCard.png" />
     <Content Include="Pictures\gears.png" />
     <Content Include="Pictures\groups.png" />
+    <Content Include="Pictures\lion.jpg" />
     <Content Include="Pictures\memory_icon.png" />
+    <Content Include="Pictures\Pairing_icon.png" />
     <Content Include="Pictures\plus.png" />
     <Content Include="Pictures\search.png" />
     <Content Include="Pictures\users.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\arrow.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\leftHook.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\leftZag.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\line.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\rightHook.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\rightZag.png" />
+    <Content Include="Scripts\Game\assets\blocks\custom\square.png" />
+    <Content Include="Scripts\Game\blockrain.css" />
+    <Content Include="Scripts\Game\blockrain.js" />
+    <Content Include="Scripts\Game\blockrain.jquery.min.js" />
     <Content Include="Scripts\text2speech.js" />
     <Content Include="Scripts\Memory.js" />
     <Content Include="SetQuestions.aspx" />
@@ -177,6 +191,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="SetUser.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="Tetris.aspx" />
     <Content Include="Uploader.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -291,6 +306,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tetris.aspx.cs">
+      <DependentUpon>Tetris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tetris.aspx.designer.cs">
+      <DependentUpon>Tetris.aspx</DependentUpon>
     </Compile>
     <Compile Include="Uploader.aspx.cs">
       <DependentUpon>Uploader.aspx</DependentUpon>

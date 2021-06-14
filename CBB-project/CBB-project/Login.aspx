@@ -37,8 +37,6 @@
                         </div>
                         <asp:Button ID="loginBut" CssClass="btn btn-success mt-3 p-2" Text="Mehet!" OnClick="loginClick" runat="server" />
                         <asp:LinkButton ID="forgottenPsw" CssClass="d-block mt-4" Text="Elfelejtett jelszó" runat="server" OnClick="forgottenClick"></asp:LinkButton>
-                    
-                        <input type="button" id="blind" value="Vak vagyok" onclick="return readST('username required')"/>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@
     else
     { %>
         <div class="row menuClass myPage">
-            <div class="col-sm-3 col-md-2" style="width: 10rem;">
+            <div class="col-sm-3 col-md-2 mr-auto" style="width: 10rem;">
                 <img src="/Pictures/amigos2.png" class="myImg" />
             </div>
             <div class="col-sm-9 col-md-10">
@@ -37,11 +37,12 @@
                     <a href="/Events" class="ml-auto"><img src="/Pictures/event.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
-                    <a href="#" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/Tetris" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
                     <a href="/FAQ" class="ml-auto"><img src="/Pictures/question.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
+                 <!--onclick="return readST('linkToUser', 'hu-HU')"--> 
             </div>
         </div>
     <%} %>

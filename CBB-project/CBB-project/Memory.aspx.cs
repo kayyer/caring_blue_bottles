@@ -10,15 +10,20 @@ namespace CBB_project
     public partial class Memory : System.Web.UI.Page
     {
         public Dictionary<string, string> qas;
+        public Dictionary<string, string> pairs;
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             qas = new Dictionary<string, string>();
+            pairs = new Dictionary<string, string>();
 
             qas.Add("Kérdés0", "Válasz0");
             qas.Add("Kérdés1", "Válasz1");
             qas.Add("Kérdés2", "Válasz2");
             qas.Add("Kérdés3", "Válasz3");
+
+            pairs.Add("picture01", "picture02");
 
             coder();
 
@@ -32,10 +37,15 @@ namespace CBB_project
 
         public string coderMaker()
         {
-            
+
             return "<input type='submit' id='myID' text='" + qas["Kérdés0"] + "' onclick='return clickMemory()'/>";
         }
 
+        public Dictionary<string, string> getPairs()
+        {
+
+            return pairs;
+        }
 
     }
 }
