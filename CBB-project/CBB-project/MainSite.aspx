@@ -32,6 +32,7 @@
                     <a href="#" class="mx-auto"><img src="/Pictures/event-management.png" class="myImg" style="width: 8rem; opacity: 0.30;"/></a>
                     <p>Események</p>
                 </div>
+
                 <div class="row myrow menurow">
                     <a href="#" class="mx-auto"><img src="/Pictures/folder.png" class="myImg" style="width: 8rem; opacity: 0.30;"/></a>
                     <p>Kérvények</p>
@@ -43,11 +44,9 @@
     else
     { %>
         <div class="row menuClass myPage">
-<<<<<<< Updated upstream
-            <div class="col-sm-3 col-md-2 mr-auto" style="width: 10rem;">
-=======
+
+ 
             <div class="mcol col-sm-3 col-md-2" style="width: 10rem;">
->>>>>>> Stashed changes
                 <img src="/Pictures/amigos2.png" class="myImg" />
             </div>
             <div class="mcol col-sm-9 col-md-10">
@@ -59,20 +58,17 @@
                     <a href="/Events" class="ml-auto"><img src="/Pictures/events.png" class="myImg" style="width: 8rem;"/></a>
                     <p>Események</p>
                 </div>
-<<<<<<< Updated upstream
-                <div class="row myrow">
-                    <a href="/Tetris" class="ml-auto"><img src="/Pictures/controller.png" class="myImg" style="width: 8rem;"/></a>
-=======
+
                 <div class="row myrow menurow">
-                    <a href="#" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/joystick.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/Tetris" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/joystick.png" class="myImg" style="width: 8rem;"/></a>
                      <p>Játékok</p>
->>>>>>> Stashed changes
                 </div>
                 <div class="row myrow menurow">
                     <a href="/FAQ" class="ml-auto"><img src="/Pictures/conversation.png" class="myImg" style="width: 8rem;"/></a>
                      <p>Kérdések</p>
                 </div>
                  <!--onclick="return readST('linkToUser', 'hu-HU')"--> 
+            </div>
             </div>
         </div>
     <%} %>
