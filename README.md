@@ -15,3 +15,5 @@ To run:
 	- Create a database with SSMS (name it "CBB")
 	- Run the init script in SSMS
 	- Run
+
+Youtube link: https://youtu.be/M62uAv6ug1E
