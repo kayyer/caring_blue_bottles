@@ -2,6 +2,7 @@
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="/Content/messages.css" rel="stylesheet" type="text/css">
     <div class="myPage">
         <% if (docID.Equals(""))
             { %>
@@ -31,11 +32,9 @@
 
             <div class="row mx-auto" style="height: 30px; width:80%; text-align: center;">
                 <div class="col-sm-3" style="height:100%">
-                    <asp:ImageButton ID="refrB" CssClass="btn btn-warning h-100 d-inline-block" ImageUrl="~/Pictures/refresh.png" OnClick="refreshBut_Click" runat="server"/>
+                    <asp:ImageButton ID="refrB" CssClass="btn btn-warning h-100 d-inline-block refresh" ImageUrl="~/Pictures/refresh.png" OnClick="refreshBut_Click" runat="server"/>
                 </div>
-                <div class="col-sm-auto">
-                    <asp:TextBox ID="NameTb" CssClass="form-control" runat="server"/>
-                </div>
+
                 <%if (Master.myuser.isAdmin)
                     { %>
                         <div class="col-sm-2">
@@ -45,18 +44,21 @@
             </div>
             <div class="row mx-auto" style="width:80%">
                 <div class="col-sm-12">
-                    <asp:TextBox ID="subjectTb" CssClass="form-control" runat="server"/>
+                    <asp:TextBox ID="TextBox3" CssClass="form-control name" runat="server" PlaceHolder="címzett"/>
+                </div>
+                <div class="col-sm-auto">
+                    <asp:TextBox ID="subjectTb" CssClass="form-control subject" runat="server" PlaceHolder="tárgy"/>
                 </div>
             </div>
             <div class="row mx-auto" style="width:80%">
                 <%=newMessage() %>
             </div>
-            <div class="row mx-auto" style="height: 30px; width:80%">
-                <div class="col-sm-8">
-                    <asp:TextBox ID="newtextTb" PlaceHolder="Új üzenet" runat="server"></asp:TextBox>
+            <div class="row mx-auto" style="width:80%">
+                <div class="col-sm-6">
+                    <asp:TextBox ID="newtextTb" CssClass="newmessage" PlaceHolder="Új üzenet" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
-                <div class="col-sm-2" style="height:100%">
-                    <asp:ImageButton ID="sendBut" ImageUrl="Pictures/send.png" CssClass="btn btn-success h-100 d-inline-block" AlternateText="Küldés" OnClick="sendBut_Click" runat="server"/>
+                <div class="col-sm-4">
+                    <asp:ImageButton ID="sendBut" ImageUrl="Pictures/send.png" CssClass="btn btn-success d-inline-block" Style="width:60px; height:40px; position:absolute; bottom:0; right:600;" AlternateText="Küldés" OnClick="sendBut_Click" runat="server"/>
                 </div>
             </div>
 

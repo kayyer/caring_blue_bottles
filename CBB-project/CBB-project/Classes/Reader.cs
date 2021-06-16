@@ -16,7 +16,7 @@ namespace CBB_project.Classes
         {
         }
 
-        public static void setQAData(string filePath, bool isFirstRowHeader, SQLIF sqlif)
+        public static void setQAData(string filePath, bool isFirstRowHeader, SQLIF sqlif, string ugid, string tid)
         {
             string header = isFirstRowHeader ? "Yes" : "No";
 
@@ -40,6 +40,8 @@ namespace CBB_project.Classes
                     sqlif.ResetParameters();
                     sqlif.AddVarcharParameter("@question", datas[0]);
                     sqlif.AddVarcharParameter("@answer", datas[1]);
+                    sqlif.AddIntParameter("@UGID", Int32.Parse(ugid));
+                    sqlif.AddIntParameter("@TID", Int32.Parse(tid));
                     sqlif.runSp("setQA");
                 }
             }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -64,6 +65,16 @@ namespace CBB_project
                 usernameTb.Text = user["UserName"].ToString();
                 fullnameTb.Text = user["FullName"].ToString();
                 descTb.Text = user["Description"].ToString();
+
+                bool same = (Master.myuser.userID == docID);
+
+                usernameTb.Enabled = same;
+                fullnameTb.Enabled = same;
+                descTb.Enabled = same;
+                birthdateCal.Enabled = same;
+                pswTb.Visible = same;
+                repswTb.Visible = same;
+
                 string[] data = user["BirthDate"].ToString().Split(' ');
                 if (data.Length >= 3)
                 {
@@ -96,6 +107,25 @@ namespace CBB_project
                 }
             }
             Master.SqlIF.runSp("setUsers");
+        }
+
+        protected void delBut_Click(object sender, EventArgs e)
+        {
+            Master.SqlIF.ResetParameters();
+            Master.SqlIF.AddIntParameter("@UID", docID);
+            Master.SqlIF.AddCharParameter("@sessionid", Master.myuser.sessionID, 36);
+            Master.SqlIF.AddIntParameter("@senderID", Master.myuser.userID);
+            Master.SqlIF.AddIntParameter("@delete", 1);
+            Master.SqlIF.runSp("setUsers");
+        }
+    
+        protected string getGroups()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("");
+
+            return sb.ToString();
         }
     }
 }

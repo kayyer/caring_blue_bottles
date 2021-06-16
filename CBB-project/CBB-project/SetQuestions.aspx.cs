@@ -1,6 +1,7 @@
 ﻿using CBB_project.Classes;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,23 @@ namespace CBB_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Master.SqlIF.ResetParameters();
+                DataTable dt = Master.SqlIF.getDataTable("getUserGroups");
+                foreach(DataRow dr in dt.Rows)
+                {
+                    groupDdl.Items.Add(new ListItem(dr["GroupName"].ToString(), dr["UGID"].ToString()));
+                }
 
+                Master.SqlIF.ResetParameters();
+                Master.SqlIF.AddIntParameter("@all", 1);
+                dt = Master.SqlIF.getDataTable("getTasks");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    taskDdl.Items.Add(new ListItem(dr["Name"].ToString(), dr["TID"].ToString()));
+                }
+            }
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
@@ -51,7 +68,7 @@ namespace CBB_project
             // Display the result of the upload.
             frmConfirmation.Visible = true;
 
-            Reader.setQAData(strFilePath, false, Master.SqlIF);
+            Reader.setQAData(strFilePath, false, Master.SqlIF, groupDdl.SelectedValue, taskDdl.SelectedValue);
             File.Delete(strFilePath);
             lblUploadResult.Text = "Kérdések sikeresen feltöltve.";
         }
