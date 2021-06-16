@@ -45,7 +45,6 @@
     { %>
         <div class="row menuClass myPage">
 
- 
             <div class="mcol col-sm-3 col-md-2" style="width: 10rem;">
                 <img src="/Pictures/amigos2.png" class="myImg" />
             </div>
@@ -61,6 +60,7 @@
 
                 <div class="row myrow menurow">
                     <a href="/Tetris" onclick="return readST('linkToUser', 'hu-HU')" class="ml-auto"><img src="/Pictures/joystick.png" class="myImg" style="width: 8rem;"/></a>
+
                      <p>Játékok</p>
                 </div>
                 <div class="row myrow menurow">
