@@ -27,5 +27,14 @@ input[type=text].newmessage, textarea {
     height: 400px;
     width: 400px;
 }
+input[type=text].subject_2 {
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-
+textarea.answer {
+    margin-top: 10px;
+    height: 20px;
+    width: 400px;
+}

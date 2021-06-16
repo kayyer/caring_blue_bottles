@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memory.aspx.cs" Inherits="CBB_project.Memory" %>
+﻿<%@ Page Title="Memória" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memory.aspx.cs" Inherits="CBB_project.Memory" %>
 <%@ MasterType virtualpath="~/Site.Master" %>
 
 
@@ -22,7 +22,7 @@
         <img class="memoryImg memoryImg08" src="/Pictures/amigosCard.png" alt="Kártyalap" id="picture08" onclick='return clickPicture("picture08")'>
         <img class="memoryImg memoryImg09" src="/Pictures/amigosCard.png" alt="Kártyalap" id="picture09" onclick='return clickPicture("picture09")'>
     </div> 
-        <img class="gif" id="hiddenimageid" >
+        <img class="gif" id="hiddenimageid">
     <div style="margin-top:600px;">
         <asp:Label CssClass="results" ID="label1" runat="server" Text="Eredmény: "></asp:Label>
         <asp:Label CssClass="results" ID="label2" runat="server" Text="még nincs találat"></asp:Label>

@@ -12,8 +12,6 @@ function readST(wheretofind, slanguage) {
         slanguage = "en-US";
     }
     msg.lang = slanguage;
-    while (msg.lang != slanguage);
-    console.log("hiv " + slanguage);
     window.speechSynthesis.speak(msg);
 
     return false;

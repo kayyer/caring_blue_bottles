@@ -45,6 +45,10 @@ namespace CBB_project
             //Pairing bundle:
             bundles.Add(new ScriptBundle("~/bundles/pairing").Include(
               "~/Scripts/Pairing.js"));
+
+            //Crossers bundle:
+            bundles.Add(new ScriptBundle("~/bundles/crossers").Include(
+              "~/Scripts/crossers.js"));
         }
     }
 }

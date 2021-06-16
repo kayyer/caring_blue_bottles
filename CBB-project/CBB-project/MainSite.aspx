@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="Főoldal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MainSite.aspx.cs" Inherits="CBB_project.MainSite" %>
 <%@ MasterType virtualpath="~/Site.Master" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" style="background-image: url('/Pictures/hatter.png');" runat="server">
-        <%: Scripts.Render("~/bundles/text2speech") %>
-
-
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <% if (Master.myuser.isAdmin)
     { %>
 
@@ -16,7 +13,7 @@
                 </div>
                 <div class="row myrow menurow">
                     <a href="/SetUsergroups" class="mx-auto"><img src="/Pictures/crowd.png" class="myImg" style="width: 8rem;"/></a>
-                    <p>Csoportok</p>
+                    <p>Csoportok</p> 
                 </div>
                 <div class="row myrow menurow">
                     <a href="/ListUsers" class="mx-auto"><img src="/Pictures/shortlist.png" class="myImg" style="width: 8rem;"/></a>
@@ -67,8 +64,6 @@
                     <a href="/FAQ" class="ml-auto"><img src="/Pictures/conversation.png" class="myImg" style="width: 8rem;"/></a>
                      <p>Kérdések</p>
                 </div>
-                 <!--onclick="return readST('linkToUser', 'hu-HU')"--> 
-            </div>
             </div>
         </div>
     <%} %>

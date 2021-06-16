@@ -9,7 +9,7 @@
 
                 <div class="row mx-auto" style="height: 30px; width:80%; text-align: center;">
                     <div class="col-sm-3" style="height:100%">
-                        <asp:ImageButton ID="refreshBut" CssClass="btn btn-warning h-100 d-inline-block" ImageUrl="~/Pictures/refresh.png" OnClick="refreshBut_Click" runat="server"/>
+                        <asp:ImageButton ID="refreshBut" CssClass="btn btn-warning h-100 d-inline-block" ImageUrl="~/Pictures/refresh_icon.png" OnClick="refreshBut_Click" runat="server"/>
                     </div>
                     <div class="col-sm-auto">
                         <asp:TextBox ID="search" CssClass="form-control" runat="server"/>
@@ -32,7 +32,7 @@
 
             <div class="row mx-auto" style="height: 30px; width:80%; text-align: center;">
                 <div class="col-sm-3" style="height:100%">
-                    <asp:ImageButton ID="refrB" CssClass="btn btn-warning h-100 d-inline-block refresh" ImageUrl="~/Pictures/refresh.png" OnClick="refreshBut_Click" runat="server"/>
+                    <asp:ImageButton ID="refrB" CssClass="btn btn-warning h-100 d-inline-block refresh" ImageUrl="~/Pictures/refresh_icon.png" OnClick="refreshBut_Click" runat="server"/>
                 </div>
 
                 <%if (Master.myuser.isAdmin)
@@ -68,7 +68,7 @@
 
             <div class="row mx-auto" style="height: 30px; width:80%; text-align: center;">
                 <div class="col-sm-3" style="height:100%">                    
-                    <asp:ImageButton ID="rfBtn" CssClass="btn btn-warning h-100 d-inline-block" ImageUrl="~/Pictures/refresh.png" OnClick="refreshBut_Click" runat="server"/>
+                    <asp:ImageButton ID="rfBtn" CssClass="btn btn-warning h-100 d-inline-block" ImageUrl="~/Pictures/refresh_icon.png" OnClick="refreshBut_Click" runat="server"/>
                 </div>
                 <div class="col-sm-9">
                     <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"/>
@@ -76,7 +76,7 @@
             </div>
             <div class="row mx-auto" style="width: 80%">
                 <div class="col-sm-12">
-                    <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server"/>
+                    <asp:TextBox ID="TextBox2" CssClass="form-control subject_2"  runat="server"/>
                 </div>
             </div>
             <div class="row mx-auto" style="width:80%">
@@ -84,10 +84,10 @@
             </div>
             <div class="row mx-auto" style="height: 30px; width:80%">
                 <div class="col-sm-8">
-                    <asp:TextBox ID="textTb" PlaceHolder="Új üzenet" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textTb" CssClass="newmessage answer" TextMode="MultiLine" Style="margin-left: 75px;" PlaceHolder="Új üzenet" runat="server"></asp:TextBox>
                 </div>
-                <div class="col-sm-2" style="height:100%">
-                    <asp:ImageButton ID="sendBut_2" ImageUrl="/Pictures/send.png" CssClass="btn btn-success h-100 d-inline-block" AlternateText="Küldés" OnClick="Send_Click" runat="server"/>
+                <div class="col-sm-2" style="">
+                    <asp:ImageButton ID="sendBut_2" ImageUrl="/Pictures/send.png" CssClass="btn btn-success d-inline-block" Style="width:50px; height:30px; position:absolute; bottom:0; right:600;" AlternateText="Küldés" OnClick="Send_Click" runat="server"/>
                 </div>
             </div>
 

@@ -28,26 +28,10 @@ function clickPicture(p1) {
 
     for (var i = 0; i < 10; i++) {
         jQuery("#picture0" + i).removeClass("show");
-        /*jQuery("#picture0" + i).height(303);
-        jQuery("#picture0" + i).width(200);
-        jQuery("#picture0" + i).css("margin-top", 0);
-        jQuery("#picture0" + i).css("margin-bottom", 0);
-        jQuery("#picture0" + i).css("margin-left", 0);
-        jQuery("#picture0" + i).css("margin-right", 20);*/
         jQuery("#picture0" + i).addClass("defaultMemory");
         jQuery("#picture0" + i).attr('src', '/Pictures/amigosCard.png');
     }
 
-
-    /*jQuery("#" + p1).height(231);
-    jQuery("#" + p1).width(154);
-    jQuery("#" + p1).css("margin-top", 36);
-    jQuery("#" + p1).css("margin-bottom", 36);
-    jQuery("#" + p1).css("margin-left", 23);
-    jQuery("#" + p1).css("margin-right", 43);
-    jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');*/
-    //jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');
-    //óriás switch-case
     switch (p1) {
 
         case "picture00":
@@ -60,6 +44,8 @@ function clickPicture(p1) {
 
         case "picture02":
             jQuery("#" + p1).attr('src', '/Pictures/lion_megoldás.png');
+            var msg = new SpeechSynthesisUtterance("Lion");
+            window.speechSynthesis.speak(msg);
             break;
 
         case "picture03":
@@ -76,18 +62,26 @@ function clickPicture(p1) {
 
         case "picture06":
             jQuery("#" + p1).attr('src', '/Pictures/zebra_megoldás.png');
+            var msg = new SpeechSynthesisUtterance("Zebra");
+            window.speechSynthesis.speak(msg);
             break;
 
         case "picture07":
             jQuery("#" + p1).attr('src', '/Pictures/kakadu_megoldás.png');
+            var msg = new SpeechSynthesisUtterance("Cockatoo");
+            window.speechSynthesis.speak(msg);
             break;
 
         case "picture08":
             jQuery("#" + p1).attr('src', '/Pictures/emu_megoldás.png');
+            var msg = new SpeechSynthesisUtterance("Emu");
+            window.speechSynthesis.speak(msg);
             break;
 
         case "picture09":
             jQuery("#" + p1).attr('src', '/Pictures/varánusz_megoldás.png');
+            var msg = new SpeechSynthesisUtterance("Varanus");
+            window.speechSynthesis.speak(msg);
             break;
 
     }

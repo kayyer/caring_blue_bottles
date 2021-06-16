@@ -89,7 +89,8 @@ div.myPage{
     align-items: center;
     flex: 0 0 35%;
 }
-.menurow {
+
+div.menurow {
     margin-bottom: 0px !important;
     margin-top: 0px !important;
     flex-direction: column;
