@@ -50,8 +50,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -110,40 +110,36 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\crossers.css" />
     <Content Include="Content\memory.css" />
-    <Content Include="Content\messages.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CrossWord.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Events.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="ListUsers.aspx" />
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
+<<<<<<< Updated upstream
     <Content Include="Pictures\amigosCard.png" />
-    <Content Include="Pictures\emu.jpg" />
-    <Content Include="Pictures\emu_megoldás.png" />
     <Content Include="Pictures\gears.png" />
     <Content Include="Pictures\groups.png" />
-    <Content Include="Pictures\houses_dark.png" />
-    <Content Include="Pictures\houses_light.png" />
-    <Content Include="Pictures\kakadu.jpg" />
-    <Content Include="Pictures\kakadu_megoldás.png" />
     <Content Include="Pictures\lion.jpg" />
-    <Content Include="Pictures\lion_megoldás.png" />
+=======
+    <Content Include="Pictures\chat.png" />
+    <Content Include="Pictures\crowd.png" />
+    <Content Include="Pictures\event-management.png" />
+    <Content Include="Pictures\FAQgear.png" />
+    <Content Include="Pictures\folder.png" />
+>>>>>>> Stashed changes
     <Content Include="Pictures\memory_icon.png" />
     <Content Include="Pictures\Pairing_icon.png" />
     <Content Include="Pictures\plus.png" />
+    <Content Include="Pictures\qgear.png" />
+    <Content Include="Pictures\question.png" />
+    <Content Include="Pictures\QuestionGear.png" />
     <Content Include="Pictures\search.png" />
+<<<<<<< Updated upstream
     <Content Include="Pictures\users.png" />
-    <Content Include="Pictures\varánusz.jpg" />
-    <Content Include="Pictures\varánusz_megoldás.png" />
-    <Content Include="Pictures\zebra.jpg" />
-    <Content Include="Pictures\zebra_megoldás.png" />
-    <Content Include="Scripts\crossers.js" />
     <Content Include="Scripts\Game\assets\blocks\custom\arrow.png" />
     <Content Include="Scripts\Game\assets\blocks\custom\leftHook.png" />
     <Content Include="Scripts\Game\assets\blocks\custom\leftZag.png" />
@@ -155,9 +151,12 @@
     <Content Include="Scripts\Game\blockrain.js" />
     <Content Include="Scripts\Game\blockrain.jquery.min.js" />
     <Content Include="Scripts\text2speech.js" />
+=======
+    <Content Include="Pictures\shortlist.png" />
+    <Content Include="Scripts\hash.js" />
+>>>>>>> Stashed changes
     <Content Include="Scripts\Memory.js" />
-    <Content Include="SetQuestions.aspx" />
-    <Content Include="SetUsergroups.aspx" />
+    <Content Include="Scripts\Pairing.js" />
     <Content Include="Tasks.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -169,8 +168,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Pictures\refresh.png" />
-    <Content Include="WordCrosser.aspx" />
-    <Content Include="WordSearcher.aspx" />
+    <Content Include="Pairing.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="MainSite.aspx" />
@@ -220,15 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\Hasher.cs" />
     <Compile Include="Classes\myUser.cs" />
-    <Compile Include="Classes\Reader.cs" />
     <Compile Include="Classes\SQLIF.cs" />
-    <Compile Include="CrossWord.aspx.cs">
-      <DependentUpon>CrossWord.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CrossWord.aspx.designer.cs">
-      <DependentUpon>CrossWord.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -250,33 +240,12 @@
     <Compile Include="FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListUsers.aspx.cs">
-      <DependentUpon>ListUsers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ListUsers.aspx.designer.cs">
-      <DependentUpon>ListUsers.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Memory.aspx.cs">
       <DependentUpon>Memory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Memory.aspx.designer.cs">
       <DependentUpon>Memory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SetQuestions.aspx.cs">
-      <DependentUpon>SetQuestions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SetQuestions.aspx.designer.cs">
-      <DependentUpon>SetQuestions.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SetUsergroups.aspx.cs">
-      <DependentUpon>SetUsergroups.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SetUsergroups.aspx.designer.cs">
-      <DependentUpon>SetUsergroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tasks.aspx.cs">
       <DependentUpon>Tasks.aspx</DependentUpon>
@@ -352,19 +321,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WordCrosser.aspx.cs">
-      <DependentUpon>WordCrosser.aspx</DependentUpon>
+    <Compile Include="Pairing.aspx.cs">
+      <DependentUpon>Pairing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WordCrosser.aspx.designer.cs">
-      <DependentUpon>WordCrosser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WordSearcher.aspx.cs">
-      <DependentUpon>WordSearcher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WordSearcher.aspx.designer.cs">
-      <DependentUpon>WordSearcher.aspx</DependentUpon>
+    <Compile Include="Pairing.aspx.designer.cs">
+      <DependentUpon>Pairing.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

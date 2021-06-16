@@ -42,9 +42,9 @@ namespace CBB_project
             bundles.Add(new ScriptBundle("~/bundles/memory").Include(
                     "~/Scripts/Memory.js"));
 
-            // Crossers bundle:
-            bundles.Add(new ScriptBundle("~/bundles/crossers").Include(
-                    "~/Scripts/crossers.js"));
+            //Pairing bundle:
+            bundles.Add(new ScriptBundle("~/bundles/pairing").Include(
+              "~/Scripts/Pairing.js"));
         }
     }
 }
