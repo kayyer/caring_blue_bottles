@@ -1,10 +1,4 @@
-﻿console.info("version 1.0");
-
-function clickMemory() {
-    jQuery("#myID").val('hello');
-
-    return false;
-}
+﻿console.info("version 1.1");
 
 var id = null;
 var prevCard = [];
@@ -52,7 +46,51 @@ function clickPicture(p1) {
     jQuery("#" + p1).css("margin-left", 23);
     jQuery("#" + p1).css("margin-right", 43);
     jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');*/
-    jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');
+    //jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');
+    //óriás switch-case
+    switch (p1) {
+
+        case "picture00":
+            jQuery("#" + p1).attr('src', '/Pictures/kakadu.jpg');
+            break;
+
+        case "picture01":
+            jQuery("#" + p1).attr('src', '/Pictures/lion.jpg');
+            break;
+
+        case "picture02":
+            jQuery("#" + p1).attr('src', '/Pictures/lion_megoldás.png');
+            break;
+
+        case "picture03":
+            jQuery("#" + p1).attr('src', '/Pictures/emu.jpg');
+            break;
+
+        case "picture04":
+            jQuery("#" + p1).attr('src', '/Pictures/zebra.jpg');
+            break;
+
+        case "picture05":
+            jQuery("#" + p1).attr('src', '/Pictures/varánusz.jpg');
+            break;
+
+        case "picture06":
+            jQuery("#" + p1).attr('src', '/Pictures/zebra_megoldás.png');
+            break;
+
+        case "picture07":
+            jQuery("#" + p1).attr('src', '/Pictures/kakadu_megoldás.png');
+            break;
+
+        case "picture08":
+            jQuery("#" + p1).attr('src', '/Pictures/emu_megoldás.png');
+            break;
+
+        case "picture09":
+            jQuery("#" + p1).attr('src', '/Pictures/varánusz_megoldás.png');
+            break;
+
+    }
     var elem = jQuery("#" + p1);
 
     elem.toggleClass("show");
@@ -69,7 +107,7 @@ function clickPicture(p1) {
             jQuery("#MainContent_label2").text(congrats);
             console.info("Eredmény: " + congrats);
 
-            if (congrats == 1) {
+            if (congrats == 5) {
                 character();
             }
         }
@@ -78,6 +116,3 @@ function clickPicture(p1) {
 
     return false;
 }
-//TODOs: majom ne legyen fixes-hogy néz ki másnál?, kártyák képének megcsinálása
-
-

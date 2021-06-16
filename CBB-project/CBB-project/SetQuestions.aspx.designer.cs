@@ -24,6 +24,24 @@ namespace CBB_project
         protected global::System.Web.UI.HtmlControls.HtmlInputFile oFile;
 
         /// <summary>
+        /// groupDdl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList groupDdl;
+
+        /// <summary>
+        /// taskDdl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList taskDdl;
+
+        /// <summary>
         /// btnUpload control.
         /// </summary>
         /// <remarks>

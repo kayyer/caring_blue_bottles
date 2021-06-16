@@ -108,12 +108,12 @@ namespace CBB_project
                 sb.AppendLine(" <div class='card-body'>");
                 sb.AppendLine("     <p class='card-text'>");
                 if (Int32.Parse(dr["GoalPoint"].ToString()) > 0) { 
-                    sb.AppendLine(dr["Points"].ToString() + " pontot értél el eddig a " + dr["GoalPoint"].ToString() + " elérhető pontok közül.");
+                    sb.AppendLine("A csapatod 3430 pontot ért el, amihez te " + dr["Points"].ToString() + " pontot tettél hozzá.");
                 }
                 else
                 {
-                    //kép megjelenítése
-                    sb.AppendLine("LESZ ITT "+ dr["Points"].ToString().Split('-')[1] +"/"+ dr["GoalPoint"].ToString().Split('-')[1] + " KÉP");
+                    sb.Append("<img src='/Pictures/houses_light.png' style='width:40%; height:auto;'/>");
+                    sb.AppendLine("<img src='/Pictures/houses_dark.png' style='width:37%; height:auto;'/>");
                 }
                 sb.AppendLine("</br></br>"+dr["Description"].ToString());
                 sb.AppendLine("     </p>");

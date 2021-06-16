@@ -5,7 +5,7 @@
     <div class="myPage">
 
         <% if (docID.Equals("")){ %>
-            <asp:Button ID="newBut" Text="Új felvétele" OnClick="newBut_Click" CssClass="btn btn-primary" runat="server" />
+            <asp:Button ID="newBut" Text="Új felvétele" OnClick="newBut_Click" CssClass="btn btn-success mb-4" runat="server" />
             <%= getUGroups() %>
         <%}
         else { %>

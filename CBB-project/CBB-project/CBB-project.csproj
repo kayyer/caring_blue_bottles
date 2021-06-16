@@ -110,8 +110,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\crossers.css" />
     <Content Include="Content\memory.css" />
+    <Content Include="Content\messages.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CrossWord.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Events.aspx" />
     <Content Include="FAQ.aspx" />
@@ -121,14 +124,26 @@
     <Content Include="Memory.aspx" />
     <Content Include="Pictures\amigos2.png" />
     <Content Include="Pictures\amigosCard.png" />
+    <Content Include="Pictures\emu.jpg" />
+    <Content Include="Pictures\emu_megoldás.png" />
     <Content Include="Pictures\gears.png" />
     <Content Include="Pictures\groups.png" />
+    <Content Include="Pictures\houses_dark.png" />
+    <Content Include="Pictures\houses_light.png" />
+    <Content Include="Pictures\kakadu.jpg" />
+    <Content Include="Pictures\kakadu_megoldás.png" />
     <Content Include="Pictures\lion.jpg" />
+    <Content Include="Pictures\lion_megoldás.png" />
     <Content Include="Pictures\memory_icon.png" />
     <Content Include="Pictures\Pairing_icon.png" />
     <Content Include="Pictures\plus.png" />
     <Content Include="Pictures\search.png" />
     <Content Include="Pictures\users.png" />
+    <Content Include="Pictures\varánusz.jpg" />
+    <Content Include="Pictures\varánusz_megoldás.png" />
+    <Content Include="Pictures\zebra.jpg" />
+    <Content Include="Pictures\zebra_megoldás.png" />
+    <Content Include="Scripts\crossers.js" />
     <Content Include="Scripts\Game\assets\blocks\custom\arrow.png" />
     <Content Include="Scripts\Game\assets\blocks\custom\leftHook.png" />
     <Content Include="Scripts\Game\assets\blocks\custom\leftZag.png" />
@@ -154,6 +169,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Pictures\refresh.png" />
+    <Content Include="WordCrosser.aspx" />
+    <Content Include="WordSearcher.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="MainSite.aspx" />
@@ -205,6 +222,13 @@
     <Compile Include="Classes\myUser.cs" />
     <Compile Include="Classes\Reader.cs" />
     <Compile Include="Classes\SQLIF.cs" />
+    <Compile Include="CrossWord.aspx.cs">
+      <DependentUpon>CrossWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrossWord.aspx.designer.cs">
+      <DependentUpon>CrossWord.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +351,20 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WordCrosser.aspx.cs">
+      <DependentUpon>WordCrosser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordCrosser.aspx.designer.cs">
+      <DependentUpon>WordCrosser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WordSearcher.aspx.cs">
+      <DependentUpon>WordSearcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WordSearcher.aspx.designer.cs">
+      <DependentUpon>WordSearcher.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

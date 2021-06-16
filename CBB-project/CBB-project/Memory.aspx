@@ -8,14 +8,7 @@
     <div class="myPage">
     <!--HTML-->
 
-
-
-    <div style="margin-top:100px;">
-        <!-- <asp:TextBox ID="tb" runat="server"></asp:TextBox>
-        <%= coderMaker() %> -->
-    </div>
-        <p class="results">Szia! Itt a feladatod az egymáshoz kapcsolódó kártyapárok megtalálása. A kártyák lefordítva vannak, egyszerre csak egyet tudsz megnézni, mi van rajta, ezért meg kell jegyezned, melyik kártyán mi szerepelt. </p>
-    <script src="script.js"></script>
+    <p class="results">Szia! Itt a feladatod az egymáshoz kapcsolódó kártyapárok megtalálása. A kártyák lefordítva vannak, egyszerre csak egyet tudsz megnézni, mi van rajta, ezért meg kell jegyezned, melyik kártyán mi szerepelt. </p>
 
     <div>
         <img class="memoryImg memoryImg00" src="/Pictures/amigosCard.png" alt="Kártyalap" id="picture00" onclick='return clickPicture("picture00")'>
@@ -29,7 +22,7 @@
         <img class="memoryImg memoryImg08" src="/Pictures/amigosCard.png" alt="Kártyalap" id="picture08" onclick='return clickPicture("picture08")'>
         <img class="memoryImg memoryImg09" src="/Pictures/amigosCard.png" alt="Kártyalap" id="picture09" onclick='return clickPicture("picture09")'>
     </div> 
-        <img class="gif" src="" id="hiddenimageid" >
+        <img class="gif" id="hiddenimageid" >
     <div style="margin-top:600px;">
         <asp:Label CssClass="results" ID="label1" runat="server" Text="Eredmény: "></asp:Label>
         <asp:Label CssClass="results" ID="label2" runat="server" Text="még nincs találat"></asp:Label>

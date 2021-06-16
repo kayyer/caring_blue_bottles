@@ -11,7 +11,7 @@
         <div class="row menuClass myPage">
             <div class="col-sm-6 col-md-6">
                 <div class="row myrow">
-                    <a href="/SetQuestions" class="ml-auto"><img src="/Pictures/gears.png" class="myImg" style="width: 8rem;"/></a>
+                    <a href="/SetQuestions"  class="ml-auto"><img src="/Pictures/gears.png" class="myImg" style="width: 8rem;"/></a>
                 </div>
                 <div class="row myrow">
                     <a href="/SetUsergroups" class="ml-auto"><img src="/Pictures/groups.png" class="myImg" style="width: 8rem;"/></a>

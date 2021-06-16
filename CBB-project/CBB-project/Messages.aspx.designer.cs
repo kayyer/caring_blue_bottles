@@ -60,13 +60,13 @@ namespace CBB_project
         protected global::System.Web.UI.WebControls.ImageButton refrB;
 
         /// <summary>
-        /// NameTb control.
+        /// TextBox3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NameTb;
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
         /// subjectTb control.

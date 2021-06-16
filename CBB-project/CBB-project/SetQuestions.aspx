@@ -4,8 +4,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="myPage">
 
-        <input id="oFile" type="file" class="btn btn-success" runat="server" name="oFile" />
-        <asp:Button id="btnUpload"  Text="Feltöltés" CssClass="btn btn-success" runat="server" OnClick="btnUpload_Click"></asp:button>
+        <input id="oFile" type="file" class="btn btn-success d-inline" runat="server" name="oFile" />
+        <asp:DropDownList ID="groupDdl" CssClass="form-control d-inline-block h-100" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="taskDdl" CssClass="form-control d-inline-block h-100" runat="server"></asp:DropDownList>
+
+        <asp:Button id="btnUpload"  Text="Feltöltés" CssClass="btn btn-success mt-4 d-block" runat="server" OnClick="btnUpload_Click"></asp:button>
         <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
             <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
         </asp:Panel>
