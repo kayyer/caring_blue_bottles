@@ -41,6 +41,10 @@ namespace CBB_project
             // Memory bundle:
             bundles.Add(new ScriptBundle("~/bundles/memory").Include(
                     "~/Scripts/Memory.js"));
+
+            //Pairing bundle:
+            bundles.Add(new ScriptBundle("~/bundles/pairing").Include(
+              "~/Scripts/Pairing.js"));
         }
     }
 }

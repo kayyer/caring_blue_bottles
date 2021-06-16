@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" style="height:90px; padding:0px;" runat="server" href="~/Messages">
-                                <img style="height:90px; width:auto; padding:5px;" src="/Pictures/message_icon.png">
+                                <img style="height:90px; width:auto; padding:5px;" src="/Pictures/chat.png">
                             </a>
                         </li>
                     </ul>
